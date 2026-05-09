@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}{{ s.name }} in Delhi NCR – Secure Herbal Pest Control{% endblock %}
+{% block content %}
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="section-badge {% if s.slug == 'termite-control' %}red{% endif %}" style="display:inline-block;margin-bottom:12px">{{ s.tag }}</div>
+    <h1><i class="{{ s.icon }}"></i> {{ s.name }}</h1>
+    <p>{{ s.tagline }}</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a><i class="fas fa-chevron-right"></i>
+      <a href="/services">Services</a><i class="fas fa-chevron-right"></i>
+      <span>{{ s.name }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Overview -->
+<section class="section">
+  <div class="container">
+    <div class="service-detail-item">
+      <div>
+        <div class="section-badge">About This Service</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:#1a1a1a;margin:10px 0 14px">What Is {{ s.name }}?</h2>
+        <p style="font-size:15.5px;color:#555;line-height:1.8;margin-bottom:24px">{{ s.what_is }}</p>
+        <p style="font-size:15.5px;color:#555;line-height:1.8">{{ s.description }}</p>
+        <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+          <a href="/contact" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Get Free Quote</a>
+          <a href="https://wa.me/917676072229" class="btn btn-secondary" style="background:#25d366;color:#fff;border-color:#25d366"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+      </div>
+      <div>
+        <div style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:20px;padding:40px;text-align:center">
+          <div style="font-size:90px;color:#2e7d32;margin-bottom:16px"><i class="{{ s.icon }}"></i></div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:#1b5e20;margin-bottom:8px">{{ s.name }}</div>
+          <div style="background:#2e7d32;color:#fff;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:700;display:inline-block;margin-bottom:20px">Starting from {{ s.starting_price }}</div>
+          <div style="text-align:left">
+            <div style="font-weight:700;color:#1b5e20;margin-bottom:10px;font-size:14px">KEY HIGHLIGHTS</div>
+            {% for point in s.benefits[:4] %}
+            <div style="display:flex;align-items:center;gap:8px;padding:6px 0;font-size:14px;color:#333;border-bottom:1px solid #b2dfdb">
+              <i class="fas fa-check-circle" style="color:#2e7d32"></i> {{ point }}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Signs of Infestation -->
+<section style="background:#f9fbe7;padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-badge">Warning Signs</div>
+      <h2 class="section-title">Signs You Need {{ s.name }}</h2>
+      <p class="section-sub">Don't wait for the infestation to get worse. Look out for these warning signs.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      {% for sign in s.signs %}
+      <div style="background:#fff;border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+        <div style="width:40px;height:40px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i class="fas fa-exclamation-triangle" style="color:#c62828;font-size:16px"></i>
+        </div>
+        <span style="font-size:14.5px;color:#444;line-height:1.5">{{ sign }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Treatment Process -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:50px">
+      <div class="section-badge">Our Process</div>
+      <h2 class="section-title">How We Do {{ s.name }}</h2>
+      <p class="section-sub">A systematic, proven approach to completely eliminate your pest problem.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px">
+      {% for step_title, step_icon, step_desc in s.process %}
+      <div style="text-align:center;padding:32px 24px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.07);border-top:4px solid #2e7d32;position:relative">
+        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#2e7d32,#43a047);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+          <i class="{{ step_icon }}" style="color:#fff;font-size:24px"></i>
+        </div>
+        <div style="position:absolute;top:16px;left:16px;width:28px;height:28px;border-radius:50%;background:#e8f5e9;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;color:#2e7d32">
+          {{ loop.index }}
+        </div>
+        <h3 style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:#1a1a1a;margin-bottom:10px">{{ step_title }}</h3>
+        <p style="font-size:13.5px;color:#666;line-height:1.6">{{ step_desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge" style="background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.4)">Why Choose Us</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#fff;margin:10px 0 12px">Benefits of Our {{ s.name }} Service</h2>
+      <p style="color:rgba(255,255,255,0.8);font-size:15px">Everything you get when you book Secure Herbal Pest Control</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      {% for benefit in s.benefits %}
+      <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,0.15)">
+        <i class="fas fa-check-circle" style="color:#a5d6a7;font-size:18px;flex-shrink:0"></i>
+        <span style="color:#fff;font-size:14.5px;font-weight:500">{{ benefit }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge">Transparent Pricing</div>
+      <h2 class="section-title">{{ s.name }} Charges</h2>
+      <p class="section-sub">Honest, upfront pricing with no hidden charges. Final price confirmed after free site inspection.</p>
+    </div>
+    <div style="max-width:700px;margin:0 auto;overflow-x:auto">
+      <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);min-width:320px">
+        <div style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:16px 28px;display:grid;grid-template-columns:2fr 2fr 1fr;gap:12px">
+          <div style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px">PROPERTY TYPE</div>
+          <div style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px">AREA</div>
+          <div style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;text-align:right">PRICE</div>
+        </div>
+        {% for prop_type, area, price in s.pricing %}
+        <div style="padding:16px 28px;display:grid;grid-template-columns:2fr 2fr 1fr;gap:12px;border-bottom:1px solid #f0f0f0;{% if loop.index is even %}background:#f9fbe7{% endif %}">
+          <div style="font-weight:600;color:#1a1a1a;font-size:14.5px">{{ prop_type }}</div>
+          <div style="color:#555;font-size:14px">{{ area }}</div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;color:#1b5e20;font-size:15px;text-align:right">{{ price }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:13px;color:#888">
+        <i class="fas fa-info-circle" style="color:#2e7d32"></i>
+        Prices are estimates. Final quote given after site inspection. 18% GST applicable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:#f9fbe7;padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge">FAQ</div>
+      <h2 class="section-title">{{ s.name }} — Frequently Asked Questions</h2>
+    </div>
+    <div style="max-width:800px;margin:0 auto">
+      {% for question, answer in s.faqs %}
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>{{ question }}</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><p>{{ answer }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Other Services -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-badge">Explore More</div>
+      <h2 class="section-title">Other Pest Control Services</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+      {% for os in other_services %}
+      <a href="/services/{{ os.slug }}" style="text-decoration:none">
+        <div style="background:#fff;border-radius:12px;padding:24px 16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06);border:2px solid transparent;transition:all 0.25s" onmouseover="this.style.borderColor='#2e7d32'" onmouseout="this.style.borderColor='transparent'">
+          <div style="font-size:36px;color:#2e7d32;margin-bottom:10px"><i class="{{ os.icon }}"></i></div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:#1a1a1a">{{ os.name }}</div>
+          <div style="font-size:12px;color:#2e7d32;margin-top:4px;font-weight:600">{{ os.starting_price }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#fff;margin-bottom:14px">Ready to Book {{ s.name }}?</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:32px">Get a free inspection and quote. Our expert will call you within 30 minutes.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:7676072229" class="btn btn-white"><i class="fas fa-phone-alt"></i> 7676072229</a>
+      <a href="https://wa.me/917676072229" class="btn btn-white" style="background:transparent;border-color:rgba(255,255,255,0.5);color:#fff"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="/contact" class="btn btn-white" style="background:transparent;border-color:rgba(255,255,255,0.5);color:#fff"><i class="fas fa-envelope"></i> Send Enquiry</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

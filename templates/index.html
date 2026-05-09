@@ -1,0 +1,510 @@
+{% extends "base.html" %}
+{% block title %}Secure Herbal Pest Control – ISO 9001:2015 Certified | Termite Specialist Delhi NCR{% endblock %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circles"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-certificate"></i> ISO 9001:2015 Certified Company
+      </div>
+      <h1>
+        Delhi NCR's Trusted<br>
+        <span class="accent">Herbal Pest Control</span><br>
+        Specialists
+      </h1>
+      <p>Safe, eco-friendly herbal treatments that protect your family and property. We cover Gurugram, Dwarka, Rohini, Patel Nagar, Vasant Kunj, Malviya Nagar, Faridabad & Noida.</p>
+      <div class="hero-btns">
+        <a href="/contact" class="btn btn-white"><i class="fas fa-phone-alt"></i> Get Free Quote</a>
+        <a href="/services" class="btn btn-secondary" style="color:#fff;border-color:rgba(255,255,255,0.5)">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">5000+</div>
+          <div class="hero-stat-label">Jobs Done</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">8+</div>
+          <div class="hero-stat-label">Branches</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.8<i class="fas fa-star" style="color:#ffc107;font-size:18px"></i></div>
+          <div class="hero-stat-label">Customer Rating</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">15+</div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUOTE FORM -->
+    <div class="hero-form-card">
+      <h3>Get FREE Inspection</h3>
+      <p>Fill the form & our expert will call you within 30 minutes</p>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="f-name" placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select id="f-service">
+          <option value="">-- Select Service --</option>
+          <option>Termite Control</option>
+          <option>Cockroach Control</option>
+          <option>Mosquito Control</option>
+          <option>Rat / Rodent Control</option>
+          <option>Bed Bug Control</option>
+          <option>Lizard Control</option>
+          <option>Ant Control</option>
+          <option>Herbal Pest Control</option>
+          <option>General Pest Control</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Your Location</label>
+        <select id="f-city">
+          <option value="">-- Select Branch Area --</option>
+          <option>Gurugram</option>
+          <option>Dwarka</option>
+          <option>Rohini</option>
+          <option>Patel Nagar</option>
+          <option>Vasant Kunj</option>
+          <option>Malviya Nagar</option>
+          <option>Faridabad</option>
+          <option>Noida</option>
+          <option>Other Delhi NCR</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="submitQuote()">
+        <i class="fas fa-paper-plane"></i> Get Free Quote Now
+      </button>
+      <div class="form-success" id="form-success">
+        <i class="fas fa-check-circle" style="font-size:28px;color:#2e7d32;display:block;margin-bottom:8px"></i>
+        <strong>Thank You!</strong><br>We will call you shortly.<br>
+        Or call us now: <a href="tel:7676072229" style="color:#2e7d32">7676072229</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ISO STRIP -->
+<div class="iso-strip">
+  <i class="fas fa-shield-alt"></i>
+  ISO 9001:2015 Certified &nbsp;|&nbsp; Termite Specialist &nbsp;|&nbsp; Herbal & Chemical Treatments &nbsp;|&nbsp; 8 Branches across Delhi NCR
+  <i class="fas fa-leaf"></i>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Simple Process</div>
+      <h2>How It Works</h2>
+      <div class="divider"></div>
+      <p>Getting pest-free is easy. Just three steps to a cleaner, safer home or office.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <img src="https://www.getpestcontrol.in/wp-content/uploads/2020/09/contact-us-150x150.png" alt="Contact Us" class="step-img" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <h3>Get a Free Quote</h3>
+        <p>Contact us with your pest problem. Call us at <strong>7676072229</strong> or fill the quote form above.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <img src="https://www.getpestcontrol.in/wp-content/uploads/2020/09/schedule-service-150x150.png" alt="Schedule Inspection" class="step-img" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <h3>Schedule Inspection</h3>
+        <p>Our expert visits your premises, evaluates the pest situation, and creates a customized treatment plan.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <img src="https://www.getpestcontrol.in/wp-content/uploads/2020/09/have-fun-150x150.png" alt="Relax" class="step-img" loading="lazy" decoding="async" onerror="this.style.display='none'">
+        <h3>Relax – You're Pest-Free!</h3>
+        <p>Sit back while our certified technicians complete the treatment. Enjoy guaranteed results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">What We Treat</div>
+      <h2>Our Pest Control Services</h2>
+      <div class="divider"></div>
+      <p>Comprehensive pest management solutions using herbal and approved chemical treatments.</p>
+    </div>
+    <div class="services-grid">
+      {% set services = [
+        ('fas fa-bug', 'Termite Control', 'Pre & post-construction anti-termite treatments. Our specialty!', 'termite-control'),
+        ('fas fa-mosquito', 'Mosquito Control', 'Fogging and residual spray treatments for complete mosquito elimination.', 'mosquito-control'),
+        ('fas fa-bug', 'Cockroach Control', 'Gel baiting and spray methods to eliminate cockroach colonies.', 'cockroach-control'),
+        ('fas fa-paw', 'Rat Control', 'Trapping, baiting, and proofing solutions for rodent-free spaces.', 'rat-control'),
+        ('fas fa-bug', 'Bed Bug Control', 'Chemical and heat treatment to eliminate bed bugs completely.', 'bed-bug-control'),
+        ('fas fa-staff-snake', 'Lizard Control', 'Safe and effective lizard repellent treatments for homes.', 'lizard-control'),
+        ('fas fa-bug', 'Ant Control', 'Gel bait and spray to destroy ant colonies at the source.', 'ant-control'),
+        ('fas fa-leaf', 'Herbal Pest Control', 'Eco-friendly, non-toxic herbal treatments. Safe for children & pets.', 'herbal-pest-control'),
+      ] %}
+      {% for icon_class, name, desc, slug in services %}
+      <div class="service-card">
+        <div class="service-img-placeholder">
+          <i class="{{ icon_class }}"></i>
+          <span>{{ name }}</span>
+        </div>
+        <div class="service-body">
+          <h3>{{ name }}</h3>
+          <p>{{ desc }}</p>
+          <a href="/services/{{ slug }}" class="btn btn-primary btn-sm" style="margin-top:8px">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="/services" class="btn btn-primary"><i class="fas fa-th-large"></i> View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">5000<span>+</span></div>
+        <div class="stat-label">Satisfied Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">Branch Offices</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Satisfaction Guarantee</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Transparent Pricing</div>
+      <h2>Service Rate List</h2>
+      <div class="divider"></div>
+      <p>Estimated charges for common pest control treatments. Final price quoted after site inspection.</p>
+    </div>
+    <div class="pricing-tabs">
+      <button class="tab-btn active" onclick="showTab('general')">General Pest Control</button>
+      <button class="tab-btn" onclick="showTab('cockroach')">Cockroach</button>
+      <button class="tab-btn" onclick="showTab('termite')">Termite</button>
+      <button class="tab-btn" onclick="showTab('bedbug')">Bed Bug</button>
+      <button class="tab-btn" onclick="showTab('mosquito')">Mosquito</button>
+      <button class="tab-btn" onclick="showTab('rat')">Rat Control</button>
+    </div>
+
+    <div class="pricing-table active" id="tab-general">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 1,000</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 1,200</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 1,500</td></tr>
+          <tr><td>4 BHK</td><td>1600 – 2400 Sq. Ft.</td><td>₹ 1,600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-table" id="tab-cockroach">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 900</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 1,100</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 1,300</td></tr>
+          <tr><td>4 BHK</td><td>1600 – 2400 Sq. Ft.</td><td>₹ 1,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-table" id="tab-termite">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 Kitchen / Washroom</td><td>70 – 100 Sq. Ft.</td><td>₹ 1,200</td></tr>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 5,200</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 6,200</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 7,200</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-table" id="tab-bedbug">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 1,500</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 2,200</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 3,000</td></tr>
+          <tr><td>4 BHK</td><td>1600 – 2400 Sq. Ft.</td><td>₹ 3,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-table" id="tab-mosquito">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 1,700</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 1,900</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 2,300</td></tr>
+          <tr><td>4 BHK</td><td>1600 – 2400 Sq. Ft.</td><td>₹ 2,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-table" id="tab-rat">
+      <table>
+        <thead><tr><th>Property Type</th><th>Area</th><th>Starting Price</th></tr></thead>
+        <tbody>
+          <tr><td>1 BHK</td><td>400 – 700 Sq. Ft.</td><td>₹ 900</td></tr>
+          <tr><td>2 BHK</td><td>700 – 1000 Sq. Ft.</td><td>₹ 1,000</td></tr>
+          <tr><td>3 BHK</td><td>1000 – 1600 Sq. Ft.</td><td>₹ 1,200</td></tr>
+          <tr><td>4 BHK</td><td>1600 – 2400 Sq. Ft.</td><td>₹ 1,400</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pricing-note">
+      <i class="fas fa-info-circle"></i> <strong>Note:</strong> Prices above are estimates. Final pricing is quoted after site inspection. All prices are subject to 18% GST. Call us for commercial property rates.
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="/contact" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Get Exact Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Why Choose Us</div>
+      <h2>What Sets Secure Herbal Apart</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <h3>ISO 9001:2015 Certified</h3>
+          <p>We are a government-recognized ISO certified pest control company, ensuring international quality standards in every treatment.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-leaf"></i></div>
+        <div>
+          <h3>Herbal & Eco-Friendly</h3>
+          <p>Our herbal treatments are non-toxic, safe for children, elderly, and pets. We balance effectiveness with environmental responsibility.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-bug"></i></div>
+        <div>
+          <h3>Termite Specialists</h3>
+          <p>Termite control is our core specialty. We use advanced drilling, injection, and barrier techniques for lasting protection.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h3>8 Branches Across NCR</h3>
+          <p>With branches in Gurugram, Dwarka, Rohini, Patel Nagar, Vasant Kunj, Malviya Nagar, Faridabad & Noida – we're always nearby.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-user-shield"></i></div>
+        <div>
+          <h3>Experienced Professionals</h3>
+          <p>Our trained and uniformed technicians have 15+ years of combined experience handling all types of pest infestations.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-check-double"></i></div>
+        <div>
+          <h3>Guaranteed Results</h3>
+          <p>We stand behind our work. If pests return within the warranty period, we re-treat at no extra charge.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">We Serve Near You</div>
+      <h2>Our Branch Locations</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="branches-grid">
+      {% set branches = [
+        ('fas fa-city','Gurugram','gurugram','Sector 14, MG Road area'),
+        ('fas fa-home','Dwarka','dwarka','Sector 10, 12, 22 areas'),
+        ('fas fa-building','Rohini','rohini','Sector 7, 9, 11 areas'),
+        ('fas fa-house-user','Patel Nagar','patel-nagar','West Patel Nagar area'),
+        ('fas fa-tree','Vasant Kunj','vasant-kunj','A & B Pocket areas'),
+        ('fas fa-landmark','Malviya Nagar','malviya-nagar','South Delhi area'),
+        ('fas fa-industry','Faridabad','faridabad','NH-48 corridor'),
+        ('fas fa-mountain-city','Noida','noida','Sector 18, 62, 63'),
+      ] %}
+      {% for icon_class, name, slug, area in branches %}
+      <a href="/locations/{{ slug }}" class="branch-card">
+        <div class="branch-icon"><i class="{{ icon_class }}" style="color:var(--green)"></i></div>
+        <h3>{{ name }}</h3>
+        <p>{{ area }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PEST SECTION (green) -->
+<section class="section section-green">
+  <div class="container" style="text-align:center">
+    <div class="section-badge" style="background:rgba(255,255,255,0.2);color:#fff">We Handle All Pests</div>
+    <h2 style="margin-top:12px;margin-bottom:12px">Say Goodbye to Every Pest</h2>
+    <p style="max-width:560px;margin:0 auto;color:rgba(255,255,255,0.8)">Our comprehensive solutions cover every common pest found in Delhi NCR homes and offices.</p>
+    <div class="pests-row">
+      <a href="/services/termite-control" class="pest-chip"><i class="fas fa-bug"></i> Termites</a>
+      <a href="/services/mosquito-control" class="pest-chip"><i class="fas fa-mosquito"></i> Mosquitoes</a>
+      <a href="/services/cockroach-control" class="pest-chip"><i class="fas fa-bug"></i> Cockroaches</a>
+      <a href="/services/rat-control" class="pest-chip"><i class="fas fa-paw"></i> Rats & Mice</a>
+      <a href="/services/bed-bug-control" class="pest-chip"><i class="fas fa-bug"></i> Bed Bugs</a>
+      <a href="/services/lizard-control" class="pest-chip"><i class="fas fa-staff-snake"></i> Lizards</a>
+      <a href="/services/ant-control" class="pest-chip"><i class="fas fa-bug"></i> Ants</a>
+      <a href="/services/termite-control" class="pest-chip"><i class="fas fa-bug"></i> Wood Borers</a>
+      <a href="/services/mosquito-control" class="pest-chip"><i class="fas fa-mosquito"></i> Flies</a>
+      <a href="/services/herbal-pest-control" class="pest-chip"><i class="fas fa-spider"></i> Spiders</a>
+    </div>
+    <div style="margin-top:36px">
+      <a href="/contact" class="btn btn-white"><i class="fas fa-phone-alt"></i> Book Treatment Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Customer Reviews</div>
+      <h2>What Our Customers Say</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>Excellent termite treatment! The team was professional and the herbal treatment was odorless. No termites for over a year now. Highly recommend Secure Herbal!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div><div class="author-name">Rahul Sharma</div><div class="author-loc">Gurugram</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>I called them for cockroach control and they came the same day. The gel treatment was so clean and effective. My kitchen has been cockroach-free for months!</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div><div class="author-name">Priya Mehta</div><div class="author-loc">Dwarka</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>Very professional service. Vikas sir personally supervised the bed bug treatment at our office. Great results and very reasonable pricing.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div><div class="author-name">Amit Verma</div><div class="author-loc">Noida</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Common Questions</div>
+      <h2>Frequently Asked Questions</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list">
+      {% set faqs = [
+        ('What makes Secure Herbal Pest Control different?', 'We are an ISO 9001:2015 certified company specializing in herbal and eco-friendly pest treatments. Unlike many companies, we use non-toxic herbal solutions that are safe for children and pets, while still being highly effective.'),
+        ('What is your specialization?', 'We are Termite Specialists. Termite control is our core expertise, covering both pre-construction and post-construction anti-termite treatments using advanced drilling, injection, and chemical barrier methods.'),
+        ('Which areas do you serve?', 'We have branches in Gurugram, Dwarka, Rohini, Patel Nagar, Vasant Kunj, Malviya Nagar, Faridabad, and Noida. We cover all of Delhi NCR.'),
+        ('Do I need to vacate during treatment?', 'For most general pest treatments, you can stay. However, for intensive treatments like fumigation or heavy chemical sprays, we recommend vacating for 2–4 hours. Our team will advise you based on the treatment type.'),
+        ('How long does pest control treatment last?', 'It depends on the pest. Cockroach gel treatments last 3–6 months. Termite chemical barriers can protect for 5–10 years with proper application. Mosquito fogging may need monthly repeats in monsoon season.'),
+        ('Is your herbal treatment safe for children and pets?', 'Yes. Our herbal treatments use plant-based, non-toxic formulations that are safe for children, elderly persons, and pets. We will advise you on any precautions specific to your treatment.'),
+        ('How do I book a service?', 'Simply call us at 7676072229 or 9560595933, or fill out our online quote form. Vikas Kr. Gaurav (Sr. Supervisor) will respond within 30 minutes to schedule a free inspection.'),
+      ] %}
+      {% for q, a in faqs %}
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          {{ q }} <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-a"><p>{{ a }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(24px,3vw,38px);font-weight:900;color:#fff;margin-bottom:14px">Ready to Get Rid of Pests?</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:32px">Call us now or book a free inspection. Fast response, guaranteed results.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:7676072229" class="btn btn-white"><i class="fas fa-phone-alt"></i> 7676072229</a>
+      <a href="https://wa.me/917676072229" class="btn" style="background:#25d366;color:#fff"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function submitQuote() {
+  const name = document.getElementById('f-name').value;
+  const phone = document.getElementById('f-phone').value;
+  if (!name || !phone) { alert('Please enter your name and mobile number.'); return; }
+  document.getElementById('form-success').style.display = 'block';
+}
+
+function showTab(tab) {
+  document.querySelectorAll('.pricing-table').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f => {
+    f.classList.remove('open');
+    f.querySelector('.faq-a').style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    item.querySelector('.faq-a').style.maxHeight = item.querySelector('.faq-a').scrollHeight + 'px';
+  }
+}
+</script>
+{% endblock %}

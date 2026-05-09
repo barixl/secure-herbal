@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}Contact Us – Secure Herbal Pest Control{% endblock %}
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch for a free inspection and quote. We respond within 30 minutes!</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a><i class="fas fa-chevron-right"></i><span>Contact</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>We are available 7 days a week. Our Sr. Supervisor Vikas Kr. Gaurav personally handles all customer inquiries to ensure the best service.</p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-user-tie"></i></div>
+            <div>
+              <h4>Contact Person</h4>
+              <p>Vikas Kr. Gaurav – Sr. Supervisor</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Primary Phone</h4>
+              <a href="tel:7676072229">7676072229</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Alternate Phone</h4>
+              <a href="tel:9560595933">9560595933</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/917676072229">Chat on WhatsApp</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Our Branches</h4>
+              <p style="font-size:14px;font-weight:500">Gurugram, Dwarka, Rohini, Patel Nagar, Vasant Kunj, Malviya Nagar, Faridabad, Noida</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon–Sun: 8:00 AM – 8:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3><i class="fas fa-paper-plane" style="color:#2e7d32;margin-right:8px"></i> Send Us a Message</h3>
+
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="c-name" placeholder="Your full name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile Number *</label>
+            <input type="tel" id="c-phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label>Email (optional)</label>
+            <input type="email" id="c-email" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Service Required *</label>
+            <select id="c-service">
+              <option value="">-- Select --</option>
+              <option>Termite Control</option>
+              <option>Cockroach Control</option>
+              <option>Mosquito Control</option>
+              <option>Rat / Rodent Control</option>
+              <option>Bed Bug Control</option>
+              <option>Lizard Control</option>
+              <option>Ant Control</option>
+              <option>Herbal Pest Control</option>
+              <option>General Pest Control</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Location *</label>
+            <select id="c-city">
+              <option value="">-- Select Branch --</option>
+              <option>Gurugram</option>
+              <option>Dwarka</option>
+              <option>Rohini</option>
+              <option>Patel Nagar</option>
+              <option>Vasant Kunj</option>
+              <option>Malviya Nagar</option>
+              <option>Faridabad</option>
+              <option>Noida</option>
+              <option>Other Delhi NCR</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Property Type</label>
+          <select id="c-prop">
+            <option value="">-- Select Type --</option>
+            <option>1 BHK</option>
+            <option>2 BHK</option>
+            <option>3 BHK</option>
+            <option>4 BHK / Villa</option>
+            <option>Office / Commercial</option>
+            <option>Restaurant / Hotel</option>
+            <option>Industrial / Warehouse</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message / Additional Details</label>
+          <textarea id="c-msg" placeholder="Describe your pest problem in brief..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:16px" onclick="submitContact()">
+          <i class="fas fa-paper-plane"></i> Submit Inquiry
+        </button>
+        <div class="form-success" id="contact-success">
+          <i class="fas fa-check-circle" style="font-size:36px;color:#2e7d32;display:block;margin-bottom:12px"></i>
+          <strong style="font-size:18px">Thank You!</strong><br><br>
+          We've received your inquiry. Vikas Kr. Gaurav will call you within 30 minutes.<br><br>
+          <strong>Or call us directly:</strong><br>
+          <a href="tel:7676072229" style="color:#2e7d32;font-size:18px;font-weight:700">7676072229</a> /
+          <a href="tel:9560595933" style="color:#2e7d32;font-size:18px;font-weight:700">9560595933</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BRANCH MAP PLACEHOLDER -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Our Presence</div>
+      <h2>Branch Locations</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="branches-grid">
+      {% set branches = [
+        ('fas fa-city','Gurugram','Serving all sectors of Gurugram \u0026 DLF areas'),
+        ('fas fa-home','Dwarka','Sectors 1–23 and surrounding areas'),
+        ('fas fa-building','Rohini','Sectors 1–25 and Prashant Vihar'),
+        ('fas fa-house-user','Patel Nagar','East \u0026 West Patel Nagar, Rajendra Nagar'),
+        ('fas fa-tree','Vasant Kunj','Pockets A, B, C \u0026 Vasant Vihar'),
+        ('fas fa-landmark','Malviya Nagar','South Delhi including Saket \u0026 Hauz Khas'),
+        ('fas fa-industry','Faridabad','NIT, BPTP, Sector 16–23 areas'),
+        ('fas fa-mountain-city','Noida','Sectors 18, 29, 50, 62, 63 \u0026 Greater Noida'),
+      ] %}
+      {% for icon_class, name, area in branches %}
+      <div class="branch-card">
+        <div class="branch-icon"><i class="{{ icon_class }}" style="color:var(--green)"></i></div>
+        <h3>{{ name }}</h3>
+        <p>{{ area }}</p>
+        <a href="tel:7676072229" style="display:inline-flex;align-items:center;gap:6px;color:#2e7d32;font-weight:700;font-size:13px;margin-top:12px">
+          <i class="fas fa-phone-alt"></i> Call Branch
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+function submitContact() {
+  const name = document.getElementById('c-name').value;
+  const phone = document.getElementById('c-phone').value;
+  const service = document.getElementById('c-service').value;
+  if (!name || !phone || !service) {
+    alert('Please fill in your name, phone number, and service required.');
+    return;
+  }
+  document.getElementById('contact-success').style.display = 'block';
+  document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+{% endblock %}

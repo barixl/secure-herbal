@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Secure Herbal Pest Control – ISO 9001:2015 Certified{% endblock %}</title>
+    <meta name="description" content="Secure Herbal Pest Control – ISO 9001:2015 Certified. Termite specialists serving Gurugram, Dwarka, Rohini, Patel Nagar, Vasant Kunj, Malviya Nagar, Faridabad & Noida.">
+    <!-- DNS prefetch for external origins -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preconnect for render-critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Fonts: swap prevents render block -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome: load async, apply once ready -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <span><i class="fas fa-phone-alt"></i> Call Us: <a href="tel:7676072229">7676072229</a> / <a href="tel:9560595933">9560595933</a></span>
+        <span><i class="fas fa-certificate"></i> ISO 9001:2015 Certified Company</span>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+    <div class="container">
+        <a href="/" class="logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <div class="logo-text">
+                <span class="logo-main">Secure Herbal</span>
+                <span class="logo-sub">PEST CONTROL</span>
+            </div>
+        </a>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="/services">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="/services/termite-control">Termite Control</a></li>
+                        <li><a href="/services/mosquito-control">Mosquito Control</a></li>
+                        <li><a href="/services/cockroach-control">Cockroach Control</a></li>
+                        <li><a href="/services/rat-control">Rat Control</a></li>
+                        <li><a href="/services/bed-bug-control">Bed Bug Control</a></li>
+                        <li><a href="/services/lizard-control">Lizard Control</a></li>
+                        <li><a href="/services/ant-control">Ant Control</a></li>
+                        <li><a href="/services/herbal-pest-control">Herbal Pest Control</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">Branches <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="/locations/gurugram">Gurugram</a></li>
+                        <li><a href="/locations/dwarka">Dwarka</a></li>
+                        <li><a href="/locations/rohini">Rohini</a></li>
+                        <li><a href="/locations/patel-nagar">Patel Nagar</a></li>
+                        <li><a href="/locations/vasant-kunj">Vasant Kunj</a></li>
+                        <li><a href="/locations/malviya-nagar">Malviya Nagar</a></li>
+                        <li><a href="/locations/faridabad">Faridabad</a></li>
+                        <li><a href="/locations/noida">Noida</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="/contact" class="btn-quote">Get Free Quote</a>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-leaf"></i></span>
+                    <div>
+                        <span class="logo-main">Secure Herbal</span>
+                        <span class="logo-sub">PEST CONTROL</span>
+                    </div>
+                </div>
+                <p>An ISO 9001:2015 Certified Company. Your trusted partner for herbal and chemical pest control solutions across Delhi NCR.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="/services/termite-control"><i class="fas fa-chevron-right"></i> Termite Control</a></li>
+                    <li><a href="/services/mosquito-control"><i class="fas fa-chevron-right"></i> Mosquito Control</a></li>
+                    <li><a href="/services/cockroach-control"><i class="fas fa-chevron-right"></i> Cockroach Control</a></li>
+                    <li><a href="/services/rat-control"><i class="fas fa-chevron-right"></i> Rat Control</a></li>
+                    <li><a href="/services/bed-bug-control"><i class="fas fa-chevron-right"></i> Bed Bug Control</a></li>
+                    <li><a href="/services/herbal-pest-control"><i class="fas fa-chevron-right"></i> Herbal Pest Control</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Branches</h4>
+                <ul>
+                    <li><a href="/locations/gurugram"><i class="fas fa-map-marker-alt"></i> Gurugram</a></li>
+                    <li><a href="/locations/dwarka"><i class="fas fa-map-marker-alt"></i> Dwarka</a></li>
+                    <li><a href="/locations/rohini"><i class="fas fa-map-marker-alt"></i> Rohini</a></li>
+                    <li><a href="/locations/patel-nagar"><i class="fas fa-map-marker-alt"></i> Patel Nagar</a></li>
+                    <li><a href="/locations/vasant-kunj"><i class="fas fa-map-marker-alt"></i> Vasant Kunj</a></li>
+                    <li><a href="/locations/malviya-nagar"><i class="fas fa-map-marker-alt"></i> Malviya Nagar</a></li>
+                    <li><a href="/locations/faridabad"><i class="fas fa-map-marker-alt"></i> Faridabad</a></li>
+                    <li><a href="/locations/noida"><i class="fas fa-map-marker-alt"></i> Noida</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-user"></i> Vikas Kr. Gaurav <br><small>Sr. Supervisor</small></li>
+                    <li><a href="tel:7676072229"><i class="fas fa-phone-alt"></i> 7676072229</a></li>
+                    <li><a href="tel:9560595933"><i class="fas fa-phone-alt"></i> 9560595933</a></li>
+                    <li><a href="https://wa.me/917676072229"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 Secure Herbal Pest Control. All Rights Reserved. | ISO 9001:2015 Certified</p>
+            <p class="nexa-credit">Designed &amp; Developed by <a href="https://mynexasolutions.com" target="_blank" rel="noopener">Nexa Solutions</a> — Digital Growth Partner for Businesses</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Action Buttons -->
+<div class="float-btns">
+    <a href="tel:7676072229" class="float-btn float-call" aria-label="Call us">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <a href="https://wa.me/917676072229" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp us">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>

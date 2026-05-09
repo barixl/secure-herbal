@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+{% block title %}Pest Control in {{ loc.name }} – Secure Herbal Pest Control{% endblock %}
+{% block content %}
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="section-badge" style="display:inline-block;margin-bottom:12px"><i class="fas fa-map-marker-alt"></i> {{ loc.name }}</div>
+    <h1>Pest Control in {{ loc.name }}</h1>
+    <p>{{ loc.tagline }}</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a><i class="fas fa-chevron-right"></i>
+      <span>Pest Control in {{ loc.name }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Overview -->
+<section class="section">
+  <div class="container">
+    <div class="service-detail-item">
+      <div>
+        <div class="section-badge">About Our {{ loc.name }} Branch</div>
+        <h2 style="font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:#1a1a1a;margin:10px 0 16px">
+          Pest Control Services in {{ loc.name }}{% if loc.alt_name != loc.name %} ({{ loc.alt_name }}){% endif %}
+        </h2>
+        <p style="font-size:15.5px;color:#555;line-height:1.8;margin-bottom:20px">{{ loc.about }}</p>
+        <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:28px">{{ loc.description }}</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="/contact" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Get Free Quote</a>
+          <a href="tel:{{ loc.contact_phone }}" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Call Now</a>
+        </div>
+      </div>
+      <div>
+        <!-- Stats Card -->
+        <div style="background:linear-gradient(135deg,#1b5e20,#2e7d32);border-radius:20px;padding:32px;color:#fff">
+          <div style="text-align:center;margin-bottom:24px">
+            <div style="font-size:48px;margin-bottom:8px"><i class="fas fa-map-marker-alt"></i></div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px">{{ loc.name }}</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);margin-top:4px">{{ loc.alt_name }}</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;text-align:center">
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900">15+</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.8)">Years Experience</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900">4.8<i class="fas fa-star" style="font-size:16px;color:#ffc107"></i></div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.8)">Customer Rating</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900">500+</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.8)">Jobs in {{ loc.name }}</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:14px">
+              <div style="font-family:'Montserrat',sans-serif;font-size:26px;font-weight:900">100%</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.8)">Satisfaction</div>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:6px"><i class="fas fa-map-marker-alt"></i> {{ loc.branch_address }}</div>
+            <a href="tel:{{ loc.contact_phone }}" style="color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;text-decoration:none"><i class="fas fa-phone-alt"></i> {{ loc.contact_phone }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Areas Covered -->
+<section style="background:#f9fbe7;padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-badge">Coverage</div>
+      <h2 class="section-title">Areas We Cover in {{ loc.name }}</h2>
+      <p class="section-sub">We provide pest control services across all major localities in {{ loc.name }}.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      {% for area in loc.localities %}
+      <div style="background:#fff;border:2px solid #c8e6c9;border-radius:50px;padding:10px 20px;font-size:14px;font-weight:600;color:#2e7d32;box-shadow:0 2px 8px rgba(46,125,50,0.1)">
+        <i class="fas fa-map-marker-alt" style="margin-right:6px;color:#43a047"></i>{{ area }}
+      </div>
+      {% endfor %}
+      <div style="background:#2e7d32;border:2px solid #2e7d32;border-radius:50px;padding:10px 20px;font-size:14px;font-weight:600;color:#fff">
+        + More Areas
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services in This Location -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge">Services</div>
+      <h2 class="section-title">Pest Control Services in {{ loc.name }}</h2>
+      <p class="section-sub">We offer a full range of pest control treatments at your location.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px">
+      {% for svc in all_services %}
+      <a href="/services/{{ svc.slug }}" style="text-decoration:none">
+        <div style="background:#fff;border-radius:14px;padding:24px;box-shadow:0 3px 16px rgba(0,0,0,0.07);border-left:4px solid #2e7d32;transition:all 0.25s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+            <div style="width:48px;height:48px;border-radius:12px;background:#e8f5e9;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i class="{{ svc.icon }}" style="color:#2e7d32;font-size:22px"></i>
+            </div>
+            <div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:#1a1a1a">{{ svc.name }}</div>
+              <div style="font-size:12px;color:#2e7d32;font-weight:600">{{ svc.starting_price }}</div>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#666;line-height:1.6;margin-bottom:12px">{{ svc.description[:90] }}...</p>
+          <span style="font-size:13px;font-weight:700;color:#2e7d32"><i class="fas fa-arrow-right"></i> Learn More</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Local Challenges -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge" style="background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.4)">Local Expertise</div>
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#fff;margin:10px 0 12px">
+        Common Pest Problems in {{ loc.name }}
+      </h2>
+      <p style="color:rgba(255,255,255,0.8);font-size:15px">We understand the specific pest challenges faced by {{ loc.name }} residents and businesses.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;margin:0 auto">
+      {% for challenge in loc.local_challenges %}
+      <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:18px 22px;display:flex;align-items:flex-start;gap:14px;border:1px solid rgba(255,255,255,0.15)">
+        <i class="fas fa-exclamation-circle" style="color:#ffcc02;font-size:18px;margin-top:2px;flex-shrink:0"></i>
+        <span style="color:#fff;font-size:14.5px;line-height:1.6">{{ challenge }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:50px">
+      <div class="section-badge">Process</div>
+      <h2 class="section-title">How to Book Pest Control in {{ loc.name }}</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;max-width:900px;margin:0 auto">
+      {% for step_num, step_title, step_icon, step_desc in [
+          (1, 'Contact Us', 'fas fa-phone-alt', 'Call us or fill the quote form with your pest problem and location in ' ~ loc.name ~ '.'),
+          (2, 'Free Inspection', 'fas fa-search', 'Our expert visits your home or office in ' ~ loc.name ~ ' for a free site inspection.'),
+          (3, 'Treatment', 'fas fa-spray-can', 'We carry out the pest control treatment using the recommended method for your pest problem.'),
+          (4, 'Satisfaction', 'fas fa-smile', 'Enjoy a pest-free space. We provide follow-up and guarantee on all our services.'),
+      ] %}
+      <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.07)">
+        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2e7d32,#43a047);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;position:relative">
+          <i class="{{ step_icon }}" style="color:#fff;font-size:26px"></i>
+          <div style="position:absolute;top:-6px;right:-6px;width:24px;height:24px;border-radius:50%;background:#c62828;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center">{{ step_num }}</div>
+        </div>
+        <h3 style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:#1a1a1a;margin-bottom:8px">{{ step_title }}</h3>
+        <p style="font-size:13.5px;color:#666;line-height:1.6">{{ step_desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section style="background:#f9fbe7;padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge">Pricing</div>
+      <h2 class="section-title">Pest Control Rates in {{ loc.name }}</h2>
+      <p class="section-sub">Affordable, transparent pricing. No hidden charges. Final quote after free inspection.</p>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;max-width:900px;margin:0 auto;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08)">
+        <thead>
+          <tr style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">
+            <th style="padding:16px 20px;text-align:left;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px">SERVICE</th>
+            <th style="padding:16px 20px;text-align:left;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px">1 BHK</th>
+            <th style="padding:16px 20px;text-align:left;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px">2 BHK</th>
+            <th style="padding:16px 20px;text-align:left;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px">3 BHK</th>
+            <th style="padding:16px 20px;text-align:left;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px">4 BHK</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for svc in all_services if svc.pricing|length >= 4 %}
+          <tr style="{% if loop.index is even %}background:#f9fbe7{% endif %}border-bottom:1px solid #e0e0e0">
+            <td style="padding:14px 20px;font-weight:700;color:#1a1a1a;font-size:14px">{{ svc.name }}</td>
+            {% for prop, area, price in svc.pricing[:4] %}
+            <td style="padding:14px 20px;color:#2e7d32;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px">{{ price }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:16px;font-size:13px;color:#888">
+      <i class="fas fa-info-circle" style="color:#2e7d32"></i>
+      Prices are estimates. 18% GST applicable. Final price confirmed after site inspection.
+    </p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-badge">Reviews</div>
+      <h2 class="section-title">What {{ loc.name }} Customers Say</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+      {% for name, area, rating, review in loc.testimonials %}
+      <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,0.07);border-top:4px solid #2e7d32">
+        <div style="color:#ffc107;font-size:16px;margin-bottom:14px">
+          {% for i in range(rating|int) %}<i class="fas fa-star"></i>{% endfor %}
+        </div>
+        <p style="font-size:14.5px;color:#555;line-height:1.7;margin-bottom:18px;font-style:italic">"{{ review }}"</p>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#2e7d32,#43a047);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:16px">
+            {{ name[0] }}
+          </div>
+          <div>
+            <div style="font-weight:700;color:#1a1a1a;font-size:14px">{{ name }}</div>
+            <div style="font-size:12px;color:#888"><i class="fas fa-map-marker-alt" style="color:#2e7d32"></i> {{ area }}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Other Locations -->
+<section style="background:#f9fbe7;padding:60px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-badge">Our Branches</div>
+      <h2 class="section-title">Pest Control in Other Areas</h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      {% for ol in other_locations %}
+      <a href="/locations/{{ ol.slug }}" style="text-decoration:none">
+        <div style="background:#fff;border:2px solid #c8e6c9;border-radius:50px;padding:10px 22px;font-size:14px;font-weight:600;color:#2e7d32;box-shadow:0 2px 8px rgba(46,125,50,0.1);transition:all 0.2s" onmouseover="this.style.background='#2e7d32';this.style.color='#fff'" onmouseout="this.style.background='#fff';this.style.color='#2e7d32'">
+          <i class="fas fa-map-marker-alt" style="margin-right:6px"></i>{{ ol.name }}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#fff;margin-bottom:14px">Book Pest Control in {{ loc.name }} Today</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:32px">Free inspection available. Our {{ loc.name }} expert will call you within 30 minutes.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:7676072229" class="btn btn-white"><i class="fas fa-phone-alt"></i> 7676072229</a>
+      <a href="https://wa.me/917676072229" class="btn btn-white" style="background:transparent;border-color:rgba(255,255,255,0.5);color:#fff"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="/contact" class="btn btn-white" style="background:transparent;border-color:rgba(255,255,255,0.5);color:#fff"><i class="fas fa-envelope"></i> Send Enquiry</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

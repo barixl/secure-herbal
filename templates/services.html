@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Pest Control Services – Secure Herbal Pest Control{% endblock %}
+{% block content %}
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Our Pest Control Services</h1>
+    <p>Comprehensive herbal and chemical treatments for every pest problem in Delhi NCR.</p>
+    <div class="breadcrumb">
+      <a href="/">Home</a><i class="fas fa-chevron-right"></i><span>Services</span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    {% set services = [
+      ('termite','termite-control','fas fa-bug','Termite Control','Our Specialty',
+       'Termites cause billions in property damage every year. As certified Termite Specialists, we offer comprehensive pre-construction and post-construction anti-termite solutions.',
+       ['Pre-construction soil treatment','Post-construction drilling & injection','Chemical barrier creation','Wood treatment & surface spray','Annual maintenance contracts'],
+       '₹1,200 onwards'),
+      ('mosquito','mosquito-control','fas fa-mosquito','Mosquito Control','Fogging & Spray',
+       'Mosquitoes are not just annoying — they carry dengue, malaria, and chikungunya. Our mosquito control programs keep your home and surroundings completely mosquito-free.',
+       ['Indoor residual spraying','Outdoor fogging treatment','Larviciding stagnant water sources','Monthly protection packages','Safe for children & elderly'],
+       '₹1,700 onwards'),
+      ('cockroach','cockroach-control','fas fa-bug','Cockroach Control','Gel Bait Technology',
+       'Cockroaches contaminate food and spread disease. Our advanced gel baiting technique is odorless, highly targeted, and eliminates entire colonies — including the nest.',
+       ['Gel baiting in kitchen & cabinets','Spray treatment for heavy infestations','Crack & crevice treatment','3–6 month effectiveness guarantee','No need to vacate home'],
+       '₹900 onwards'),
+      ('rat','rat-control','fas fa-paw','Rat / Rodent Control','Trapping & Baiting',
+       'Rats damage wiring, spread disease, and contaminate food. Our rodent control program combines trapping, bait stations, and proofing to eliminate and prevent infestations.',
+       ['Glue traps & mechanical traps','Rodenticide bait stations','Entry point identification & proofing','Follow-up visits included','Safe placement away from children'],
+       '₹900 onwards'),
+      ('bedbug','bed-bug-control','fas fa-bug','Bed Bug Control','Heat & Chemical',
+       'Bed bugs are notoriously hard to eliminate. We use a combination of chemical sprays and targeted treatment to fully eradicate bed bugs from mattresses, furniture, and crevices.',
+       ['Full room inspection','Chemical spray treatment','Mattress & furniture treatment','2–3 session packages available','Post-treatment guidance'],
+       '₹1,500 onwards'),
+      ('lizard','lizard-control','fas fa-staff-snake','Lizard Control','Safe Repellent',
+       'Lizards may be harmless, but their presence is unwelcome. Our non-toxic lizard repellent treatments create a barrier that keeps lizards away from your living spaces.',
+       ['Safe herbal repellent spray','Entry point treatment','Kitchen & bathroom focus','Child & pet safe formulations','Long-lasting results'],
+       '₹800 onwards'),
+      ('ant','ant-control','fas fa-bug','Ant Control','Colony Elimination',
+       'Ant infestations can be surprisingly destructive. Our gel bait and spray methods target ant colonies at the source, including the queen, for complete elimination.',
+       ['Gel bait treatment','Spray for heavy infestations','Garden & exterior perimeter treatment','Multiple species coverage','Residual protection'],
+       '₹850 onwards'),
+      ('herbal','herbal-pest-control','fas fa-leaf','Herbal Pest Control','Eco-Friendly',
+       'Our signature service — herbal pest control uses plant-derived, non-toxic formulations. Equally effective as chemical treatments but 100% safe for your family and the environment.',
+       ['Plant-based non-toxic solutions','Safe for children, pets & elderly','No strong chemical odor','Covers all common household pests','ISO certified eco-friendly process'],
+       '₹1,000 onwards'),
+    ] %}
+
+    {% for anchor, slug, icon_class, name, tag, desc, points, price in services %}
+    <div id="{{ anchor }}" class="service-detail-item {% if loop.index is even %}reverse{% endif %}">
+        <div>
+          <div class="section-badge {% if anchor == 'termite' %}red{% endif %}">{{ tag }}</div>
+          <h2 style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:#1a1a1a;margin:10px 0 14px"><i class="{{ icon_class }}"></i> {{ name }}</h2>
+          <p style="font-size:15.5px;color:#666;line-height:1.75;margin-bottom:22px">{{ desc }}</p>
+          <ul style="list-style:none;margin-bottom:28px">
+            {% for point in points %}
+            <li style="display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14.5px;border-bottom:1px solid #f0f0f0">
+              <i class="fas fa-check-circle" style="color:#2e7d32;font-size:16px"></i> {{ point }}
+            </li>
+            {% endfor %}
+          </ul>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <div style="background:#e8f5e9;border-radius:8px;padding:10px 20px">
+              <span style="font-size:12px;color:#666;font-weight:600">STARTING FROM</span>
+              <div style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:#1b5e20">{{ price }}</div>
+            </div>
+            <a href="/services/{{ slug }}" class="btn btn-primary"><i class="fas fa-info-circle"></i> View Details</a>
+            <a href="/contact" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Book Now</a>
+          </div>
+        </div>
+        <div>
+          <div style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border-radius:20px;height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px">
+            <div style="font-size:80px;color:var(--green)"><i class="{{ icon_class }}"></i></div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:#1b5e20">{{ name }}</div>
+            <div style="background:#2e7d32;color:#fff;padding:6px 18px;border-radius:50px;font-size:13px;font-weight:700">Secure Herbal Pest Control</div>
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:60px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:34px;font-weight:900;color:#fff;margin-bottom:14px">Not Sure Which Service You Need?</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:32px">Call us and we'll do a FREE inspection to identify your pest problem and recommend the right treatment.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:7676072229" class="btn btn-white"><i class="fas fa-phone-alt"></i> 7676072229</a>
+      <a href="tel:9560595933" class="btn btn-white"><i class="fas fa-phone-alt"></i> 9560595933</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
